@@ -28,8 +28,9 @@ module.exports = function(config) {
     frameworks: ['jasmine'],
 
     autoWatch: true,
+    singleRun: true,
 
-    browsers: ['Chrome']
+    browsers: ['PhantomJS']
 
   });
 };
