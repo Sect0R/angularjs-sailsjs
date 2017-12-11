@@ -2,33 +2,34 @@
 module.exports = function(config) {
   config.set({
 
-    basePath: 'assets/angular-seed-master/app',
+    // base path that will be used to resolve all patterns (eg. files, exclude)
+    basePath: './www',
 
+    // list of files / patterns to load in the browser
     files: [
-      'bower_components/angular/angular.js',
-      'bower_components/angular-route/angular-route.js',
-      'bower_components/angular-mocks/angular-mocks.js',
-      'assets/components/**/*.js',
-      'view*/**/*.js'
+      'js/dependencies/angular.js',
+      'js/dependencies/angular-animate.js',
+      'js/dependencies/angular-aria.js',
+      'js/dependencies/angular-messages.js',
+      'js/dependencies/angular-material.js',
+      'js/dependencies/angular-mocks.js',
+
+      'app.js',
+
+      'js/controllers/mainCtrl.js',
+      'js/directives/*.js',
+      'js/services/*.js',
+
+      'js/**/*_test.js',
     ],
+
+    // frameworks to use
+    // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
+    frameworks: ['jasmine'],
 
     autoWatch: true,
 
-    frameworks: ['jasmine'],
-
-    browsers: ['Chrome'],
-
-    plugins: [
-      'karma-chrome-launcher',
-      'karma-firefox-launcher',
-      'karma-jasmine',
-      'karma-junit-reporter'
-    ],
-
-    junitReporter: {
-      outputFile: 'test_out/unit.xml',
-      suite: 'unit'
-    }
+    browsers: ['Chrome']
 
   });
 };
