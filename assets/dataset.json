@@ -1,0 +1,30 @@
+{
+  "establishments": [
+    {
+      "name": "cherdak",
+      "type": "bar",
+      "region": "minskaja",
+      "contracts": [
+        {
+          "type": "live",
+          "amount": 1500
+        },
+        {
+          "type": "radio",
+          "amount": 1400
+        }
+      ]
+    },
+    {
+      "name": "revolucion",
+      "type": "hotel",
+      "region": "minskaja",
+      "contracts": [
+        {
+          "type": "radio",
+          "amount": 1800
+        }
+      ]
+    }
+  ]
+}

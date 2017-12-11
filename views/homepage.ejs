@@ -1,0 +1,46 @@
+<div ng-controller="MainCtrl" layout="column" ng-cloak>
+
+  <md-button class="mb-primary md-raised flush-button" ng-click="flushFilter()" ng-show="filtered">Flush filter</md-button>
+  <d3-chart class="text-center" data="d3Data" label="name" on-click="d3OnClick()"></d3-chart>
+
+  <md-toolbar class="md-warn">
+    <div class="md-toolbar-tools">
+      <h2 class="md-flex">Dataset</h2>
+    </div>
+  </md-toolbar>
+
+  <md-content flex layout-padding>
+      <md-input-container class="dataset-textarea">
+        <textarea ng-model="dataset" rows="7" aria-label="dataset json" md-no-autogrow></textarea>
+      </md-input-container>
+
+      <div class="dataset-buttons inset" layout="row" layout-sm="column" layout-align="center" >
+        <md-button flex="50" class="md-primary md-raised" ng-click="saveDataset(true)">Save changes</md-button>
+        <md-button flex="50" class="md-primary md-raised" ng-click="loadDatasetFromFile()">Load from file</md-button>
+        <input type="file" name="file" multiple="false" id="uploader" onchange="angular.element(this).scope().fileSelected(this)" style="display: none"  />
+      </div>
+  </md-content>
+
+</div>
+
+
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+  your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!-- In production use:
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+-->
+
+
+<script src="/js/dependencies/angular.js"></script>
+<script src="/js/dependencies/angular-animate.js"></script>
+<script src="/js/dependencies/angular-aria.js"></script>
+<script src="/js/dependencies/angular-messages.js"></script>
+<script src="/js/dependencies/angular-material.js"></script>
+<script src="/app.js"></script>
+<script src="/js/services/d3.js"></script>
+<script src="/js/services/dataset.js"></script>
+<script src="/js/controllers/mainCtrl.js"></script>
+<script src="/js/directives/d3Chart.js"></script>
