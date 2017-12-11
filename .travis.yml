@@ -7,4 +7,4 @@ before_install:
 before_script:
   - npm install -g sails
 cache: yarn
-script: sails www && yarn test
+script: sails www && npm test
